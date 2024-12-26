@@ -1,4 +1,5 @@
 import 'package:diaryapp/pages/Diary/Diary.dart';
+import 'package:diaryapp/pages/Diary/TambahDiary.dart';
 import 'package:diaryapp/pages/Mainpage/Homepage.dart';
 import 'package:diaryapp/pages/Mainpage/MoodPage.dart';
 import 'package:diaryapp/pages/Profil/Profil.dart';
@@ -95,6 +96,11 @@ class _MainPagesState extends State<MainPages> {
     }
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => TambahDiary(),
+        ));
+      }),
       body: PageView(
           controller: pages,
           onPageChanged: (value) {

@@ -123,7 +123,7 @@ class HomePage extends StatelessWidget {
       Widget peniti() {
         return Column(
           children: List.generate(
-            8,
+            7,
             (index) => Container(
               width: 80,
               margin: EdgeInsets.symmetric(vertical: 10),
@@ -157,7 +157,7 @@ class HomePage extends StatelessWidget {
                         child: Stack(
                           children: [
                             Positioned(
-                                left: 10, top: 55, bottom: 20, child: peniti()),
+                                left: 10, top: 60, bottom: 20, child: peniti()),
                           ],
                         ),
                       ),
