@@ -1,12 +1,33 @@
 import 'package:diaryapp/Widget/btnBaru.dart';
+import 'package:diaryapp/pages/Auths/Login.dart';
+import 'package:diaryapp/service/AuthService.dart';
 import 'package:diaryapp/tema/tema.dart';
 import 'package:flutter/material.dart';
 
-class Register extends StatelessWidget {
+class Register extends StatefulWidget {
   const Register({super.key});
 
   @override
+  State<Register> createState() => _RegisterState();
+}
+
+class _RegisterState extends State<Register> {
+  final TextEditingController namaC = TextEditingController();
+  final TextEditingController emailC = TextEditingController();
+  final TextEditingController passwordC = TextEditingController();
+  final TextEditingController notelpC = TextEditingController();
+  @override
   Widget build(BuildContext context) {
+    Authservice auths = Authservice();
+    Future<void> buatAkun() async {
+      await auths.register(
+          namaC.text, passwordC.text, emailC.text, int.parse(notelpC.text));
+
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => Login(),
+      ));
+    }
+
     Widget bagianHeader() {
       return Align(
         alignment: Alignment.topCenter,
@@ -76,8 +97,9 @@ class Register extends StatelessWidget {
                                 image: DecorationImage(
                                     image: AssetImage("assets/email.png"))),
                           ),
-                          const Expanded(
+                          Expanded(
                             child: TextField(
+                              controller: emailC,
                               decoration: InputDecoration(
                                   border: InputBorder.none,
                                   enabledBorder: InputBorder.none,
@@ -120,8 +142,9 @@ class Register extends StatelessWidget {
                                 image: DecorationImage(
                                     image: AssetImage("assets/User.png"))),
                           ),
-                          const Expanded(
+                          Expanded(
                             child: TextField(
+                              controller: namaC,
                               decoration: InputDecoration(
                                   border: InputBorder.none,
                                   enabledBorder: InputBorder.none,
@@ -164,8 +187,9 @@ class Register extends StatelessWidget {
                                 image: DecorationImage(
                                     image: AssetImage("assets/call.png"))),
                           ),
-                          const Expanded(
+                          Expanded(
                             child: TextField(
+                              controller: notelpC,
                               decoration: InputDecoration(
                                   border: InputBorder.none,
                                   enabledBorder: InputBorder.none,
@@ -208,8 +232,9 @@ class Register extends StatelessWidget {
                                 image: DecorationImage(
                                     image: AssetImage("assets/Lock.png"))),
                           ),
-                          const Expanded(
+                          Expanded(
                             child: TextField(
+                              controller: passwordC,
                               decoration: InputDecoration(
                                   border: InputBorder.none,
                                   enabledBorder: InputBorder.none,
@@ -229,11 +254,14 @@ class Register extends StatelessWidget {
                   ],
                 ),
               ),
-              btnBaru(
-                h: 44,
-                w: double.infinity,
-                nama: "Register",
-                cekwarna: true,
+              GestureDetector(
+                onTap: buatAkun,
+                child: btnBaru(
+                  h: 44,
+                  w: double.infinity,
+                  nama: "Register",
+                  cekwarna: true,
+                ),
               )
             ],
           ),

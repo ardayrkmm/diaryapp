@@ -1,3 +1,4 @@
+import 'package:diaryapp/models/users.dart';
 import 'package:diaryapp/pages/Diary/Diary.dart';
 import 'package:diaryapp/pages/Diary/TambahDiary.dart';
 import 'package:diaryapp/pages/Mainpage/Homepage.dart';
@@ -7,7 +8,8 @@ import 'package:diaryapp/tema/tema.dart';
 import 'package:flutter/material.dart';
 
 class MainPages extends StatefulWidget {
-  const MainPages({super.key});
+  UsersModel uss;
+  MainPages({super.key, required this.uss});
 
   @override
   State<MainPages> createState() => _MainPagesState();

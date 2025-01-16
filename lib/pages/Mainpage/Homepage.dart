@@ -178,7 +178,7 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
         body: SafeArea(
-            child: Column(
+            child: ListView(
                 children: [bagianHeader(), bagianJum(), bagianDiary()])));
   }
 }

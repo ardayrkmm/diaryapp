@@ -1,3 +1,4 @@
+import 'package:diaryapp/pages/Diary/DetailDiary.dart';
 import 'package:diaryapp/tema/tema.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -84,19 +85,26 @@ class KumpulanDiary extends StatelessWidget {
         width: double.infinity,
         child: Column(
           children: [
-            Container(
-              width: double.infinity,
-              height: 80,
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12), color: orange),
-              child: Row(
-                children: [
-                  peniti(),
-                  Text("Judul",
-                      style:
-                          putihStyle.copyWith(fontSize: 18, fontWeight: bold))
-                ],
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => DetailDiary(),
+                ));
+              },
+              child: Container(
+                width: double.infinity,
+                height: 80,
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12), color: orange),
+                child: Row(
+                  children: [
+                    peniti(),
+                    Text("Judul",
+                        style:
+                            putihStyle.copyWith(fontSize: 18, fontWeight: bold))
+                  ],
+                ),
               ),
             ),
             SizedBox(
