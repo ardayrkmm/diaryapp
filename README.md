@@ -1,45 +1,45 @@
 # 📔 Diary App - Smart Journaling
 
-**Diary App** adalah aplikasi catatan harian personal yang dikembangkan dengan Flutter. Bukan sekadar buku harian digital, aplikasi ini dilengkapi dengan fitur cerdas yang dapat memantau kondisi emosional pengguna melalui tulisan mereka, memberikan dukungan moral secara otomatis saat dibutuhkan.
+**Diary App** is a personal daily journal application developed with Flutter. More than just a digital diary, this app is equipped with smart features that can monitor the user's emotional condition through their writing, providing automatic moral support when needed.
 
 ---
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
-* **📝 Digital Journaling**: Mencatat kegiatan sehari-hari, cerita, ide, atau perasaan dengan antarmuka yang bersih dan nyaman.
-* **📊 Emotional Monitoring**: Sistem akan menganalisis catatan pengguna. Jika dalam periode tertentu terdeteksi terlalu banyak emosi sedih, aplikasi akan menyadarinya.
-* **🔔 Smart Notification & Recommendation**: Ketika pengguna terdeteksi sedang berduka atau sedih berlebih, aplikasi akan mengirimkan notifikasi penyemangat dan memberikan rekomendasi aktivitas positif (seperti: "Ayo jalan-jalan!", "Dengarkan musik ceria ini", atau motivasi lainnya).
-* **☁️ Real-time Sync**: Semua data tersimpan aman di cloud, sehingga tidak akan hilang meskipun berganti perangkat.
+* **📝 Digital Journaling**: Record daily activities, stories, ideas, or feelings with a clean and comfortable interface.
+* **📊 Emotional Monitoring**: The system will analyze user entries. If too many sad emotions are detected over a certain period, the app will recognize it.
+* **🔔 Smart Notification & Recommendation**: When a user is detected to be grieving or excessively sad, the app will send encouraging notifications and provide recommendations for positive activities (such as: "Let's go for a walk!", "Listen to this cheerful music", or other motivations).
+* **☁️ Real-time Sync**: All data is stored securely in the cloud, ensuring it won't be lost even when switching devices.
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Technologies Used
 
-* **Frontend**: [Flutter](https://flutter.dev/) (UI yang responsif dan cantik)
+* **Frontend**: [Flutter](https://flutter.dev/) (Responsive and beautiful UI)
 * **Backend & Database**: [Firebase](https://firebase.google.com/)
-    * *Firestore*: Untuk penyimpanan catatan harian.
-    * *Firebase Auth*: Untuk sistem login pengguna.
-* **Logic**: Analisis kata kunci (Keyword Analysis) untuk mendeteksi kondisi emosional pengguna.
+    * *Firestore*: For storing daily entries.
+    * *Firebase Auth*: For the user login system.
+* **Logic**: Keyword Analysis to detect the user's emotional condition.
 
 ---
 
-## 🚀 Cara Menjalankan Aplikasi
+## 🚀 How to Run the Application
 
 1.  **Clone repository**:
     ```bash
-    git clone [https://github.com/username-kamu/diary-app.git](https://github.com/username-kamu/diary-app.git)
+    git clone [https://github.com/your-username/diary-app.git](https://github.com/your-username/diary-app.git)
     ```
-2.  **Masuk ke folder proyek**:
+2.  **Navigate to the project folder**:
     ```bash
     cd diary-app
     ```
 3.  **Setup Firebase**:
-    * Hubungkan proyek Flutter dengan Firebase (masukkan file `google-services.json` untuk Android atau `GoogleService-Info.plist` untuk iOS).
+    * Connect the Flutter project with Firebase (insert the `google-services.json` file for Android or `GoogleService-Info.plist` for iOS).
 4.  **Install dependencies**:
     ```bash
     flutter pub get
     ```
-5.  **Jalankan aplikasi**:
+5.  **Run the application**:
     ```bash
     flutter run
     ```
@@ -48,7 +48,7 @@
 
 ## 👤 Developer
 
-Proyek ini dikembangkan secara mandiri oleh:
+This project was developed independently by:
 
 <table>
   <tr>
@@ -61,18 +61,16 @@ Proyek ini dikembangkan secara mandiri oleh:
   </tr>
 </table>
 
+---
 
+## 🎯 Development Goals
+
+* Provide a safe space for users to express their hearts digitally.
+* Help maintain user mental health through early emotion detection features.
+* Implement Flutter and Firebase integration to its full potential.
 
 ---
 
-## 🎯 Tujuan Pengembangan
+## 📄 License
 
-* Menyediakan ruang aman bagi pengguna untuk mencurahkan isi hati secara digital.
-* Membantu menjaga kesehatan mental pengguna melalui fitur deteksi emosi dini.
-* Menerapkan integrasi Flutter dengan Firebase secara maksimal.
-
----
-
-## 📄 Lisensi
-
-Proyek ini dibuat untuk keperluan **edukasi dan pengembangan pribadi**. Penggunaan dan modifikasi diperbolehkan dengan tetap mencantumkan kredit pengembang.
+This project was created for **educational and personal development** purposes. Use and modification are permitted as long as developer credit is maintained.
