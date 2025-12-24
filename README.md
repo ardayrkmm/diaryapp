@@ -61,7 +61,7 @@ Proyek ini dikembangkan secara mandiri oleh:
   </tr>
 </table>
 
-*(Ganti link di atas dengan akun GitHub yang ingin kamu gunakan)*
+
 
 ---
 
